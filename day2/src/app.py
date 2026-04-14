@@ -1,14 +1,17 @@
-#creating entry point for the application
-import faker
-"""
-create an entry point to display the random name
-"""
+from src.store.customerstore import CustomerStore
+from src.view.customerview import CustomerView
+
+
 def check():
     """
-    sdfggskfgkhgkhkg
+    Entry point:
+    - Creates 100 customers
+    - Displays customer details
     """
-    fake = faker.Faker()
-    print(fake.name())
+    customer_store = CustomerStore(num_customers=100)
+    customer_view = CustomerView(customer_store)
+    customer_view.display_customers()
+
+
 if __name__ == "__main__":
     check()
-
