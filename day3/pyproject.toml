@@ -1,0 +1,27 @@
+[project]
+name="ecommerce"
+version="1.0.0"
+description="Developing ecommerce application"
+readme="README.md"
+authors=[
+    {name="Suhas",email="Suhakulkarni420@gmail.com"}
+]
+requires-python=">=3.8"
+
+#this is the production dependencies
+dependencies=[
+    "faker>=13.3.3"
+]
+#development dependencies
+[project.optional-dependencies]
+dev=[
+  "pytest>=7.2.0",
+  "pytest-cov>=3.0.0",
+  "black>=23.0.0",
+  "isort>=5.10.1",
+  "sphinx>=5.0.0"
+]
+
+[tool.black]
+line-length=88
+target-version=['py313']

@@ -1,0 +1,2 @@
+2026-04-16 16:08:02,832 - healthcare.logger - INFO - Healthcare system started
+2026-04-16 16:08:02,832 - healthcare.logger - ERROR - Patient record not found
