@@ -1,7 +1,7 @@
 """Appointment model representing an appointment in the hospital system."""
 
-from doctor import Doctor
-from patient import Patient
+from models.doctor import Doctor
+from models.patient import Patient
 from datetime import datetime 
 
 class Appointment:

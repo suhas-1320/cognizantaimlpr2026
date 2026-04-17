@@ -1,2 +1,15 @@
-2026-04-16 16:08:02,832 - healthcare.logger - INFO - Healthcare system started
-2026-04-16 16:08:02,832 - healthcare.logger - ERROR - Patient record not found
+2026-04-17 05:57:06,150 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 05:57:06,155 - healthcare.logger - INFO - Running the application...
+2026-04-17 05:57:06,155 - healthcare.logger - INFO - Patient added: Patient Alice Smith, ID: 1, DOB: 1990-03-15, Disease: Flu
+2026-04-17 05:57:06,155 - healthcare.logger - INFO - create_patient: Patient Alice Smith, ID: 1, DOB: 1990-03-15, Disease: Flu
+2026-04-17 05:57:06,155 - healthcare.logger - INFO - Doctor added: Doctor Dr. Brown, ID: 1, Specialty: Cardiology
+2026-04-17 05:57:06,155 - healthcare.logger - INFO - create_doctor: Doctor Dr. Brown, ID: 1, Specialty: Cardiology
+2026-04-17 05:57:06,155 - healthcare.logger - INFO - read_patient: Patient Alice Smith, ID: 1, DOB: 1990-03-15, Disease: Flu
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - read_doctor: Doctor Dr. Brown, ID: 1, Specialty: Cardiology
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - Appointment added: Appointment ID: 1, Patient ID: 1, Doctor ID: 1, Date: 2026-04-17 00:00:00, Time: 2026-04-17 14:00:00
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - create_appointment: Appointment ID: 1, Patient ID: 1, Doctor ID: 1, Date: 2026-04-17 00:00:00, Time: 2026-04-17 14:00:00
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - read_patient: Patient Alice Smith, ID: 1, DOB: 1990-03-15, Disease: Flu
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - update_patient id=1 fields=['disease']
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - list_appointments_by_patient id=1 count=1
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - cancel_appointment: Appointment ID: 1, Patient ID: 1, Doctor ID: 1, Date: 2026-04-17 00:00:00, Time: 2026-04-17 14:00:00
+2026-04-17 05:57:06,156 - healthcare.logger - INFO - Application finished successfully.

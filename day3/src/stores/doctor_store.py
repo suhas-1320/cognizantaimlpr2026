@@ -18,11 +18,11 @@ class DoctorStore:
         for doctor in self.doctors:
             if doctor.id == doctor_id:
                 return doctor
-            raise DoctorNotFoundException(doctor_id)
+        raise DoctorNotFoundException(doctor_id)
 
 
     def get_doctors_by_specialization(self, specialization: str) -> list[Doctor]:
-        return [doctor for doctor in self.doctors if doctor.specialization == specialization]
+        return [doctor for doctor in self.doctors if doctor.specialty == specialization]
     
     def get_all_doctors(self) -> list[Doctor]:
         return self.doctors

@@ -1,26 +1,26 @@
 import logging
+import os
 
 def configure_logger():
     """Configure the logger for the healthcare application."""
 
-    # Create a logger instance
     logger = logging.getLogger("healthcare.logger")
     logger.setLevel(logging.DEBUG)
+    logger.propagate = False
 
-    # Avoid adding multiple handlers
     if logger.handlers:
         return logger
 
-    # Create file handler
-    file_handler = logging.FileHandler("healthcare.log")
+    log_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+    log_path = os.path.join(log_dir, "healthcare.log")
+
+    file_handler = logging.FileHandler(log_path)
     file_handler.setLevel(logging.DEBUG)
 
-    # Create formatter
     formatter = logging.Formatter(
         "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
 
-    # Set formatter and add handler
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
@@ -28,4 +28,3 @@ def configure_logger():
 
 logger = configure_logger()
 logger.info("Healthcare system started")
-logger.error("Patient record not found")
