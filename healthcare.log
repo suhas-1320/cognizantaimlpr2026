@@ -13,3 +13,18 @@
 2026-04-17 05:57:06,156 - healthcare.logger - INFO - list_appointments_by_patient id=1 count=1
 2026-04-17 05:57:06,156 - healthcare.logger - INFO - cancel_appointment: Appointment ID: 1, Patient ID: 1, Doctor ID: 1, Date: 2026-04-17 00:00:00, Time: 2026-04-17 14:00:00
 2026-04-17 05:57:06,156 - healthcare.logger - INFO - Application finished successfully.
+2026-04-17 10:50:40,632 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:50:45,752 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:51:03,671 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:52:01,996 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:52:53,656 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:53:18,875 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:53:25,155 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:54:14,741 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:54:26,901 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:54:34,864 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:54:45,671 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:54:53,672 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:55:06,738 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:55:12,521 - healthcare.logger - INFO - Healthcare system started
+2026-04-17 10:55:37,505 - healthcare.logger - INFO - Healthcare system started
