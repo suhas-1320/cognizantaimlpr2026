@@ -1,16 +1,18 @@
-"""Appointment model representing an appointment in the hospital system."""
-
-from models.doctor import Doctor
-from models.patient import Patient
-from datetime import datetime 
-
 class Appointment:
-    def __init__(self, id: int, patient_id: int, doctor_id: int, date: datetime, time: datetime):
+    def __init__(self, id, date, time, doctor, patient):
         self.appointment_id = id
-        self.patient_id = patient_id
-        self.doctor_id = doctor_id
         self.date = date
         self.time = time
+        self.doctor = doctor
+        self.patient = patient
 
-    def __str__(self):
-        return f"Appointment ID: {self.appointment_id}, Patient ID: {self.patient_id}, Doctor ID: {self.doctor_id}, Date: {self.date}, Time: {self.time}"  
+    def __repr__(self):
+        return (
+            f"Appointment("
+            f"id={self.appointment_id}, "
+            f"date={self.date}, "
+            f"time={self.time}, "
+            f"doctor={self.doctor}, "
+            f"patient={self.patient}"
+            f")"
+        )

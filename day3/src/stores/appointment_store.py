@@ -1,45 +1,38 @@
+"""
+create appoinment store
+"""
+import sys
+import os
+from src.models.appointment import Appointment
+from src.exceptions.appointment_not_found import AppointmentNotFoundException
 from configuration.logger_configuration import configure_logger
-from models.doctor import Doctor
-from models.appointment import Appointment
-from models.patient import Patient
 
-logger = configure_logger() 
-
+logger = configure_logger()
 class AppointmentStore:
     def __init__(self):
         self.appointments = []
-        self.doctors = []
-        self.patients = []
-
     def add_appointment(self, appointment: Appointment):
+        logger.info(f"Adding appointment: {appointment}")
         self.appointments.append(appointment)
-        logger.info(f"Appointment added: {appointment}")
-
-    def add_doctor(self, doctor: Doctor):
-        self.doctors.append(doctor)
-        logger.info(f"Doctor added: {doctor}")
-
-    def add_patient(self, patient: Patient):
-        self.patients.append(patient)
-        logger.info(f"Patient added: {patient}")
-
-    def get_appointments_by_patient_id(self, patient_id: int) -> list[Appointment]:
-        return [appointment for appointment in self.appointments if appointment.patient_id == patient_id]
-
-    def get_appointments_by_doctor_id(self, doctor_id: int) -> list[Appointment]:
-        return [appointment for appointment in self.appointments if appointment.doctor_id == doctor_id]
-
-    def get_doctor_by_id(self, doctor_id: int) -> Doctor:
-        for doctor in self.doctors:
-            if doctor.id == doctor_id:
-                return doctor
-        return None
-
-    def get_patient_by_id(self, patient_id: int) -> Patient:
-        for patient in self.patients:
-            if patient.id == patient_id:
-                return patient
-        return None
-
-    def __str__(self):
-        return f"Appointment Store with {len(self.appointments)} appointments."
+    def get_all_appointments(self):
+        logger.info("Fetching all appointments")
+        return self.appointments
+    def get_appointment_by_id(self, appointment_id: int) -> Appointment:
+        logger.info(f"Fetching appointment with ID: {appointment_id}")
+        for appointment in self.appointments:
+            if appointment.appointment_id == appointment_id:
+                return appointment
+        raise AppointmentNotFoundException(f"Appointment with ID {appointment_id} not found")
+    def update_appointment(self, appointment_id: int, doctor_id: int = None, patient_name: str = None, date: str = None):
+        appointment = self.get_appointment_by_id(appointment_id)
+        logger.info(f"Updating appointment with ID: {appointment_id}")
+        if appointment:
+            if doctor_id:
+                appointment.doctor_id = doctor_id
+            if patient_name:
+                appointment.patient_name = patient_name
+            if date:
+                appointment.date = date
+    def delete_appointment(self, appointment_id: int):
+        logger.info(f"Deleting appointment with ID: {appointment_id}")
+        self.appointments = [appointment for appointment in self.appointments if appointment.appointment_id != appointment_id]

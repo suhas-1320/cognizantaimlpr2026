@@ -1,0 +1,10 @@
+2026-04-18 02:53:25,658 - app - INFO - Adding doctor: Doctor(id=4930, name=Courtney Bowman, specialization=Engineer, civil (contracting))
+2026-04-18 02:53:25,659 - app - INFO - Adding patient: Patient(id=5451, name=Harry Guerrero, dob=1934-05-11, ailment=Service that professor student note.)
+2026-04-18 02:53:25,659 - app - INFO - Fetching doctor with ID: 4930
+2026-04-18 02:53:25,659 - app - INFO - Searching Patient by id 5451
+2026-04-18 02:53:25,659 - app - INFO - Adding appointment: Appointment(id=6679, date=2020-04-03, time=22:13:52, doctor=Doctor(id=4930, name=Courtney Bowman, specialization=Engineer, civil (contracting)), patient=Patient(id=5451, name=Harry Guerrero, dob=1934-05-11, ailment=Service that professor student note.))
+2026-04-18 02:53:48,064 - app - INFO - Adding doctor: Doctor(id=3751, name=John Lopez, specialization=Ranger/warden)
+2026-04-18 02:53:48,065 - app - INFO - Adding patient: Patient(id=393, name=Andre Fernandez, dob=1962-12-05, ailment=Almost future mouth.)
+2026-04-18 02:53:48,066 - app - INFO - Fetching doctor with ID: 3751
+2026-04-18 02:53:48,066 - app - INFO - Searching Patient by id 393
+2026-04-18 02:53:48,066 - app - INFO - Adding appointment: Appointment(id=8914, date=1993-07-04, time=05:13:48, doctor=Doctor(id=3751, name=John Lopez, specialization=Ranger/warden), patient=Patient(id=393, name=Andre Fernandez, dob=1962-12-05, ailment=Almost future mouth.))

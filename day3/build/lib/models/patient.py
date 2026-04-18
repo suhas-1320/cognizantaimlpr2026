@@ -1,14 +1,12 @@
-"""Patient model representing a patient in the hospital system.
-"""
-import typing 
-from datetime import date
-
 class Patient:
-    def __init__(self, name: str, id: int, dob: date, diesease: str):
-        self.name = name
+    def __init__(self, id, name, dob, ailment):
         self.id = id
+        self.name = name
         self.dob = dob
-        self.diesease = diesease
+        self.ailment = ailment
 
-    def __str__(self):
-        return f"Patient {self.name}, ID: {self.id}, DOB: {self.dob}, Disease: {self.diesease}"
+    def __repr__(self):
+        return (
+            f"Patient(id={self.id}, name={self.name}, "
+            f"dob={self.dob}, ailment={self.ailment})"
+        )

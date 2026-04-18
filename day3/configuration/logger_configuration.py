@@ -1,30 +1,19 @@
 import logging
 import os
 
-def configure_logger():
-    """Configure the logger for the healthcare application."""
+def configure_logger(name="app", log_file="app.log"):
+    os.makedirs("logs", exist_ok=True)
 
-    logger = logging.getLogger("healthcare.logger")
-    logger.setLevel(logging.DEBUG)
-    logger.propagate = False
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.INFO)
 
-    if logger.handlers:
-        return logger
-
-    log_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-    log_path = os.path.join(log_dir, "healthcare.log")
-
-    file_handler = logging.FileHandler(log_path)
-    file_handler.setLevel(logging.DEBUG)
-
+    file_handler = logging.FileHandler(f"logs/{log_file}")
     formatter = logging.Formatter(
         "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
-
     file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
+
+    if not logger.handlers:
+        logger.addHandler(file_handler)
 
     return logger
-
-logger = configure_logger()
-logger.info("Healthcare system started")

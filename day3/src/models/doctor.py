@@ -1,11 +1,8 @@
-"""This module defines the Doctor class, which represents a medical professional with a name, ID, and specialty."""
-
-
 class Doctor:
-    def __init__(self, name: str, id: int, specialty: str):
-        self.name = name
+    def __init__(self, id, name, specialization):
         self.id = id
-        self.specialty = specialty
+        self.name = name
+        self.specialization = specialization
 
-    def __str__(self):
-        return f"Doctor {self.name}, ID: {self.id}, Specialty: {self.specialty}"
+    def __repr__(self):
+        return f"Doctor(id={self.id}, name={self.name}, specialization={self.specialization})"
